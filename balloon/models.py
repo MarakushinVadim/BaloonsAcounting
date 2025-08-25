@@ -49,6 +49,9 @@ class Balloon(models.Model):
                               verbose_name='Статус'
                               )
 
+    def get_status_name(self):
+        return dict(self.StatusChoices.choices)[self.status]
+
     def __str__(self):
         return f'<Balloon: {self.number}>'
 
