@@ -1,0 +1,20 @@
+{% extends 'balloon/base.html' %}
+{% block content %}
+<div class="login-box center">
+  <table>
+    <thead>
+      <td>Имя</td>
+      <td>Номер телефона</td>
+      <td>Фирма</td>
+    </thead>
+    {% for client in object_list %}
+    <tr>
+      <td>{{ client.name }}</td>
+      <td>{{ client.phone }}</td>
+      <td>{{ client.firm }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+</div>
+{% endblock %}

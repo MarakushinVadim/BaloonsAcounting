@@ -1,0 +1,20 @@
+{% load static %}
+
+{% include 'balloon/includes/head.html' %}
+
+<div class="top center">
+    {% include 'balloon/includes/inc_menu.html' %}
+
+    <div class="titler_base" id="titlerBase">
+        <h1 class="title">Второй шанс вашим вещам — площадка обмена</h1>
+        <p class="desc">Обменивайте и продавайте любимые вещи легко и безопасно. Дарим вещам новую жизнь, а вам —
+            экономию и экологичное потребление. Присоединяйтесь к сообществу осознанных покупателей!</p>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

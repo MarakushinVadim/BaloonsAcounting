@@ -1,0 +1,15 @@
+{% extends 'balloon/base.html' %}
+{% block content %}
+<div class="login-box center">
+    {% if object %}
+    <h1 class="ad_list_title">Редактирование записи</h1>
+    {% else %}
+    <h1 class="ad_list_title">Создание записи</h1>
+    {% endif %}
+    <form class="row" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="login-btn">Отправить</button>
+    </form>
+</div>
+{% endblock %}
